@@ -12,14 +12,16 @@ Create a canvas of 100 x 100 px:
 let cvs = svg(100, 100, document.body)
 ```
 
-Add a pink square, filling the canvas:
+Add a square, filling the canvas:
 
 ```js
-let rect = el('rect', cvs, {
-  width: 100,
-  height: 100,
-  fill: 'pink'
-})
+let rect = el('rect', cvs, {width: 100, height: 100})
+```
+
+Update the colour of the square:
+
+```js
+at(rect, {fill: 'pink'})
 ```
 
 Animate the corner radius of the square:
@@ -31,7 +33,7 @@ el('animate', rect, {
   dur: '5s',
   repeatCount: 'indefinite'
 })
-````
+```
 
 ## License
 micro.svg.js is licensed under the terms of the MIT License.
