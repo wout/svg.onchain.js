@@ -34,4 +34,4 @@ el('animate', rect, {
 ````
 
 ## License
-SVG.js is licensed under the terms of the MIT License.
+micro.svg.js is licensed under the terms of the MIT License.
