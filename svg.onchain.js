@@ -10,7 +10,7 @@ const SVG = {
     * @param {number} h - Element height.
     * @param {HTMLElement} p - The parent (HTML) element.
     * @param {object|[string, boolean|number|string][]|null} o - Attribute values.
-    * @return A new SVG document.
+    * @return {SVGElement} A new SVG document.
     */
   doc: (w, h, p, o) => {
     const [e, a] = [SVG.el('svg', p), {height: h, version: '1.1', width: w}]
@@ -23,7 +23,7 @@ const SVG = {
     * @param {string} n - The element's node name.
     * @param {SVGElement} p - The parent (SVG) element.
     * @param {object|[string, boolean|number|string][]|null} o - Attribute values.
-    * @return A new SVG element.
+    * @return {SVGElement} A new SVG element.
     */
   el: (n, p, o) => SVG.at(p.appendChild(document.createElementNS(SVG.ns, n)), o),
 
@@ -32,7 +32,7 @@ const SVG = {
     * @param {Element} e - The target element.
     * @param {object|[string, boolean|number|string][]|null} o - Attribute values.
     * @param {string|null} n - Optional custom namespace.
-    * @return The target element.
+    * @return {SVGElement} The target element.
     */
   at: (e, o, n) => {
     if (!((o = o || []) instanceof Array)) o = Object.entries(o)
