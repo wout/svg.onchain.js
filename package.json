@@ -1,0 +1,15 @@
+{
+  "name": "svg.onchain.js",
+  "version": "0.1.0",
+  "description": "A micro JS library for manipulating and animating SVG.",
+  "main": "index.js",
+  "repository": "git@github.com:onchainjs/svg.onchain.js.git",
+  "author": "Wout <hi@wout.codes>",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^4.1.0"
+  },
+  "scripts": {
+    "test": "jasmine"
+  }
+}
