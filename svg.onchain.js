@@ -6,8 +6,8 @@ SVG = {
 
   /**
     * Creates a root SVG document.
-    * @param {number|string} w - Element width.
-    * @param {number|string} h - Element height.
+    * @param {number} w - Element width.
+    * @param {number} h - Element height.
     * @param {HTMLElement} p - The parent (HTML) element.
     * @param {object|[string, boolean|number|string][]|null} o - Attribute values.
     * @return A new SVG document.
