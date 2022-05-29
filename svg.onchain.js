@@ -3,7 +3,6 @@ const SVG = {
     * The SVG namespace.
     */
   ns: 'http://www.w3.org/2000/svg',
-
   /**
     * Creates a root SVG document.
     * @param {number} w - Element width.
@@ -17,7 +16,6 @@ const SVG = {
     e.setAttribute('xmlns', SVG.ns)
     return SVG.at(e, Object.assign(a, o || []))
   },
-
   /**
     * Creates an element.
     * @param {string} n - The element's node name.
@@ -26,7 +24,6 @@ const SVG = {
     * @return {SVGElement} A new SVG element.
     */
   el: (n, p, o) => SVG.at(p.appendChild(document.createElementNS(SVG.ns, n)), o),
-
   /**
     * Assigns attributes to given element.
     * @param {Element} e - The target element.
