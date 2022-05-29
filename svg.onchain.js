@@ -1,4 +1,4 @@
-SVG = {
+const SVG = {
   /**
     * The SVG namespace.
     */
