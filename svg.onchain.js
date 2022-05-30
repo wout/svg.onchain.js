@@ -28,12 +28,11 @@ const SVG = {
     * Assigns attributes to given element.
     * @param {Element} e - The target element.
     * @param {object|[string, boolean|number|string][]|null} o - Attribute values.
-    * @param {string|null} n - Optional custom namespace.
     * @return {SVGElement} The target element.
     */
-  at: (e, o, n) => {
+  at: (e, o) => {
     if (!((o = o || []) instanceof Array)) o = Object.entries(o)
-    for (let i = o.length - 1; i >= 0; i--) e.setAttributeNS(n, o[i][0], o[i][1])
+    for (let i = o.length - 1; i >= 0; i--) e.setAttribute(o[i][0], o[i][1])
     return e
   }
 }
