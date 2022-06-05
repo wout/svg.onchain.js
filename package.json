@@ -1,6 +1,6 @@
 {
   "name": "svg.onchain.js",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A micro JS library for manipulating and animating SVG.",
   "main": "svg.onchain.js",
   "repository": "git@github.com:onchainjs/svg.onchain.js.git",
