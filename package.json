@@ -5,5 +5,13 @@
   "main": "svg.onchain.js",
   "repository": "git@github.com:onchainjs/svg.onchain.js.git",
   "author": "Wout <hi@wout.codes>",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "jasmine": "^4.1.0",
+    "svgdom": "^0.1.10"
+  },
+  "scripts": {
+    "test": "jasmine"
+  }
 }
