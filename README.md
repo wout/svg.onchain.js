@@ -3,7 +3,11 @@ A micro JS library (403 bytes) for manipulating and animating SVG.
 
 This library is intended for use in environments where the available storage
 space is very limited; like blockchains for example. Everything is stripped down
-to the bare essentials. 
+to the bare essentials.
+
+![GitHub](https://img.shields.io/github/license/onchainjs/svg.onchain.js)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/onchainjs/svg.onchain.js)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/onchainjs/svg.onchain.js/svg.onchain.js%20CI)
 
 ## Why not use vanilla JS?
 Building an SVG document with plain JS is pretty verbose. Let's look at the 
