@@ -1,5 +1,5 @@
 # svg.onchain.js
-A micro JS library (403 bytes) for manipulating and animating SVG.
+A micro JS library (396 bytes) for manipulating and animating SVG.
 
 This library is intended for use in environments where the available storage
 space is very limited; like blockchains for example. Everything is stripped down
@@ -69,6 +69,9 @@ SVG.el('animate', rect, {
   repeatCount: 'indefinite'
 })
 ```
+
+**Note**: animations are controlled by SMIL, which may be replaced by CSS
+animations in the future. For now, it's still safe to use them but YMMV.
 
 ## License
 svg.onchain.js is licensed under the terms of the MIT License.

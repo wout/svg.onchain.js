@@ -15,10 +15,18 @@ describe('SVG', () => {
       expect(cvs.getAttribute('height')).toBe(150)
     })
 
-    it('accepts optional attributes', () => {
+    it('accepts optional attributes as an object', () => {
       let cvs = SVG.doc(100, 150, document.documentElement, {
         viewBox: '0 0 200 300'
       })
+
+      expect(cvs.getAttribute('viewBox')).toBe('0 0 200 300')
+    })
+
+    it('accepts optional attributes as an array', () => {
+      let cvs = SVG.doc(100, 150, document.documentElement, [
+        ['viewBox', '0 0 200 300']
+      ])
 
       expect(cvs.getAttribute('viewBox')).toBe('0 0 200 300')
     })
