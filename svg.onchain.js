@@ -8,14 +8,13 @@ export const SVG = {
     * Creates a root SVG document.
     * @param {number} w - Element width.
     * @param {number} h - Element height.
-    * @param {HTMLElement} p - The parent (HTML) element.
+    * @param {HTMLElement} e - The parent (HTML) element.
     * @param {object|[string, boolean|number|string][]|null} o - Attribute key/value pairs.
     * @return {SVGElement} A new SVG document.
     */
-  doc(w, h, p, o = {}) {
-    const [e, a] = [this.el('svg', p), {height: h, version: '1.1', width: w}]
-    e.setAttribute('xmlns', this.ns)
-    return this.at(this.at(e, a), o)
+  doc(w, h, e, o) {
+    (e = SVG.el('svg', e)).setAttribute('xmlns', SVG.ns)
+    return SVG.at(SVG.at(e, {height: h, version: '1.1', width: w}), o)
   },
 
   /**
@@ -26,18 +25,19 @@ export const SVG = {
     * @return {SVGElement} A new SVG element.
     */
   el(n, p, o) {
-    return this.at(p.appendChild(document.createElementNS(this.ns, n)), o)
+    return SVG.at(p.appendChild(document.createElementNS(SVG.ns, n)), o)
   },
 
   /**
     * Assigns attributes to given element.
     * @param {Element} e - The target element.
     * @param {object|[string, boolean|number|string][]|null} o - Attribute key/value pairs.
+    * @param {null} i - Iterator index (for internal use only).
     * @return {SVGElement} The target element.
     */
-  at(e, o) {
+  at(e, o, i) {
     if (!((o = o || []) instanceof Array)) o = Object.entries(o)
-    for (let i = o.length - 1; i >= 0; i--) e.setAttribute(o[i][0], o[i][1])
+    for (i = o.length - 1; i >= 0; i--) e.setAttribute(o[i][0], o[i][1])
     return e
   }
 }
