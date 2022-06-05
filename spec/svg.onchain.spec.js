@@ -52,7 +52,7 @@ describe('SVG', () => {
       expect(rect.getAttribute('rx')).toBe(11)
     })
 
-    it('assigns nothing i null is passed', () => {
+    it('assigns nothing if null is passed', () => {
       let rect = SVG.el('rect', testDoc(), {width: 100, height: 50})
       let originalAttributes = rect.attributes.map(a => String([a.nodeName, a.nodeValue]))
 
