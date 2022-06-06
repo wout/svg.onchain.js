@@ -70,8 +70,5 @@ SVG.el('animate', rect, {
 })
 ```
 
-**Note**: animations are controlled by SMIL, which may be replaced by CSS
-animations in the future. For now, it's still safe to use them but YMMV.
-
 ## License
 svg.onchain.js is licensed under the terms of the MIT License.
