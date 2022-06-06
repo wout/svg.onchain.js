@@ -38,7 +38,9 @@ SVG.el('rect', svg, {width: 100, height: 100, fill: '#f06', rx: 10, ry: 20})
 ```
 
 That's 98 bytes instead of 406, or roughly 75% less code. And the difference is
-only going to get bigger the more objects you add.
+only going to get bigger the more objects you add. Of course, this library takes
+up 362 bytes as well, but that's quickly compensated after adding a few more
+objects.
 
 ## Usage
 Create a canvas of 100x100 px:
