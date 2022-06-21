@@ -14,13 +14,13 @@ Building an SVG document with plain JS is pretty verbose. Let's look at the
 following example:
 
 ```js
-let ns = 'http://www.w3.org/2000/svg'
-let svg = document.createElementNS(ns, 'svg')
+const ns = 'http://www.w3.org/2000/svg'
+const svg = document.createElementNS(ns, 'svg')
 svg.setAttribute('xmlns', ns)
 svg.setAttribute('width', 100)
 svg.setAttribute('height', 100)
-parent.appendChild(svg)
-let rect = document.createElementNS(ns, 'rect')
+document.body.appendChild(svg)
+const rect = document.createElementNS(ns, 'rect')
 rect.setAttribute('width', 100)
 rect.setAttribute('height', 100)
 rect.setAttribute('fill', '#f06')
@@ -33,8 +33,8 @@ That's the code to create an SVG canvas and draw a pink square on it. In
 comparison, doing the same using this library is a lot more consice:
 
 ```js
-let svg = SVG.doc(100, 100, parent)
-SVG.el('rect', svg, {width: 100, height: 100, fill: '#f06', rx: 10, ry: 20})
+const doc = SVG.doc(100, 100, document.body)
+SVG.el('rect', doc, {width: 100, height: 100, fill: '#f06', rx: 10, ry: 20})
 ```
 
 That's 98 bytes instead of 406, or roughly 75% less code. And the difference is
